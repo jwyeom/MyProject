@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script>
+function click() {
+	console.log("aaa");
+	  var returnValue = {
+	    key1: 'value1',
+	    key2: 'value2',
+	    key3: 'value3'
+	  };
+	  window.opener.getReturnValue(JSON.stringify(returnValue));
+	  window.close();
+	}
+</script>
+<body>
+서비스 명 : <input type="text" name="service" id="service">
+블럭설명 : <input type="text" name="block" id="block">
+<input type="button" id="returnButton" value="확인" onclick="javascript:click();">
+</body>
+</html>
